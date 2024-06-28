@@ -28,14 +28,7 @@ CREATE TABLE paciente (
     cep VARCHAR(20)
 );
 
-CREATE TABLE plano_saude (
-    id_paciente INT,
-    plano_familiar INT,
-    plano_individual INT,
-    meses_pagamento INT,
-    PRIMARY KEY (id_paciente),
-    FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente)
-);
+
 
 CREATE TABLE exame (
     id_exame INT PRIMARY KEY,
@@ -55,6 +48,16 @@ CREATE TABLE consulta (
     FOREIGN KEY (id_exame) REFERENCES exame(id_exame),
     FOREIGN KEY (id_medicamento) REFERENCES medicamento(id_medicamento)
 );
+
+CREATE TABLE plano_saude(
+    id_plano_saude INT AUTO_INCREMENT PRIMARY KEY,
+    id_paciente INT,
+    plano_familiar INT,
+    plano_individual INT,
+    meses_pagamento INT,
+    FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente)
+);
+
 
 
 INSERT INTO Exame (id_exame, nome, observacoes, resultados) VALUES
