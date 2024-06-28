@@ -13,7 +13,7 @@ Este banco de dados tem como objetivo centralizar e organizar informações rela
 
 Diagrama ER:
 
-![diagrama ER](diagramas/Diagrama ER.png)
+![diagrama ER](diagramas/Diagrama%20ER.png)
 
 Diagrama Conceitual:
 
